@@ -6,7 +6,7 @@ object Versions {
 
 object Libraries {
     const val junit = "junit:junit:4.12"
-    const val mockk = "io.mockk:mockk:1.9.1"
+    const val mockk = "io.mockk:mockk:1.9.3"
     const val log4jSlf4jImpl = "org.apache.logging.log4j:log4j-slf4j-impl:2.11.2"
     const val jsoup = "org.jsoup:jsoup:1.11.3"
     const val h2 = "com.h2database:h2:1.4.197"
