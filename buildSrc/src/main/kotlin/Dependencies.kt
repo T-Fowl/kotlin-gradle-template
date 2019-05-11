@@ -151,7 +151,7 @@ object Libraries {
     }
 
     object Lwjgl {
-        private const val version = "3.2.1"
+        private const val version = "3.2.2"
         private const val prefix = "org.lwjg:lwjgl"
 
         const val lwjgl = "$prefix:$version"
