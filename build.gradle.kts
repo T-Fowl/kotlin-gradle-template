@@ -16,7 +16,7 @@ tasks.withType<KotlinCompile> {
 }
 
 kapt {
-    useBuildCache = true
+    /*useBuildCache = true*/
 }
 
 tasks.withType<KotlinCompile> {

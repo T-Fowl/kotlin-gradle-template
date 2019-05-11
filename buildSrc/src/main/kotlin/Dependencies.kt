@@ -1,7 +1,7 @@
 import org.gradle.internal.os.OperatingSystem
 
 object Versions {
-    const val kotlin = "1.3.21"
+    const val kotlin = "1.3.30"
 }
 
 object Libraries {
