@@ -81,7 +81,7 @@ object Libraries {
         const val serializationRuntime = "org.jetbrains.kotlinx:kotlinx-serialization-runtime:0.10.0"
 
         object Coroutines {
-            private const val version = "1.1.1"
+            private const val version = "1.2.1"
             private const val prefix = "org.jetbrains.kotlinx:kotlinx-coroutines"
 
             const val core = "$prefix-core:$version"
