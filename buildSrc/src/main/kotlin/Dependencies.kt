@@ -91,7 +91,7 @@ object Libraries {
     }
 
     object Kodein {
-        const val genericJvm = "org.kodein.di:kodein-di-generic-jvm:6.1.0"
+        const val genericJvm = "org.kodein.di:kodein-di-generic-jvm:6.2.0"
     }
 
     object Retrofit {
