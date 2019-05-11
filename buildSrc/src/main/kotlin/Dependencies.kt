@@ -190,6 +190,7 @@ object Libraries {
         const val cuda = "$prefix-cuda:$version"
         const val libdivide = "$prefix-libdivide:$version"
 
+        @Suppress("INACCESSIBLE_TYPE")
         fun Natives(os: OperatingSystem = OperatingSystem.current()): Natives = when (os) {
             OperatingSystem.LINUX   -> Natives("natives-linux")
             OperatingSystem.MAC_OS  -> Natives("natives-macos")
