@@ -4,6 +4,7 @@ object Versions {
     const val kotlin = "1.3.31"
 }
 
+@Suppress("ALL")
 object Libraries {
     const val junit = "junit:junit:4.12"
     const val mockk = "io.mockk:mockk:1.9.3"
@@ -19,11 +20,11 @@ object Libraries {
     const val jacksonKotlin = "com.fasterxml.jackson.module:jackson-module-kotlin:2.9.8"
     const val joml = "org.joml:joml:1.9.14"
 
-    object Kotlin {
+    object kotlin {
         const val stdlibJdk8 = "org.jetbrains.kotlin:kotlin-stdlib-jdk8:${Versions.kotlin}"
     }
 
-    object Ktor {
+    object ktor {
         private const val version = "1.2.0"
         private const val prefix = "io.ktor:ktor"
 
@@ -77,11 +78,11 @@ object Libraries {
         const val clientMockJvm = "$prefix-client-mock-jvm:$version"
     }
 
-    object Kotlinx {
+    object kotlinx {
 
         const val serializationRuntime = "org.jetbrains.kotlinx:kotlinx-serialization-runtime:0.10.0"
 
-        object Coroutines {
+        object coroutines {
             private const val version = "1.2.1"
             private const val prefix = "org.jetbrains.kotlinx:kotlinx-coroutines"
 
@@ -91,11 +92,11 @@ object Libraries {
         }
     }
 
-    object Kodein {
+    object kodein {
         const val genericJvm = "org.kodein.di:kodein-di-generic-jvm:6.2.0"
     }
 
-    object Retrofit {
+    object retrofit {
         private const val version = "2.5.0"
         private const val prefix = "com.squareup.retrofit2"
 
@@ -109,15 +110,15 @@ object Libraries {
         const val scalarsConverter = "$prefix:converter-scalars:$version"
     }
 
-    object OkHttp {
+    object okhttp {
         const val okhttp = "com.squareup.okhttp3:okhttp:3.14.0"
     }
 
-    object Okio {
+    object okio {
         const val okio = "com.squareup.okio:okio:2.2.2"
     }
 
-    object ArrowKt {
+    object arrowkt {
         private const val version = "0.9.0"
         private const val prefix = "io.arrow-kt:arrow"
 
@@ -147,11 +148,11 @@ object Libraries {
         const val integrationEetrofitAdapter = "$prefix-integration-retrofit-adapter:$version"
     }
 
-    object ApacheCommons {
+    object apachecommons {
         const val compress = "org.apache.commons:commons-compress:1.18"
     }
 
-    object Lwjgl {
+    object lwjgl {
         private const val version = "3.2.2"
         private const val prefix = "org.lwjg:lwjgl"
 
@@ -192,7 +193,7 @@ object Libraries {
         const val libdivide = "$prefix-libdivide:$version"
 
         @Suppress("INACCESSIBLE_TYPE")
-        fun Natives(os: OperatingSystem = OperatingSystem.current()): Natives = when (os) {
+        fun natives(os: OperatingSystem = OperatingSystem.current()): Natives = when (os) {
             OperatingSystem.LINUX   -> Natives("natives-linux")
             OperatingSystem.MAC_OS  -> Natives("natives-macos")
             OperatingSystem.WINDOWS -> Natives("natives-windows")

@@ -30,7 +30,7 @@ repositories {
 }
 
 dependencies {
-    compile(Libraries.Kotlin.stdlibJdk8)
+    compile(Libraries.kotlin.stdlibJdk8)
 
     testCompile(Libraries.junit)
     testCompile(Libraries.mockk)
