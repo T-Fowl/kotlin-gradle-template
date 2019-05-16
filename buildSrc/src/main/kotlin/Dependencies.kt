@@ -7,12 +7,13 @@ object Versions {
 object Libraries {
     const val junit = "junit:junit:4.12"
     const val mockk = "io.mockk:mockk:1.9.3"
+
     const val log4jSlf4jImpl = "org.apache.logging.log4j:log4j-slf4j-impl:2.11.2"
     const val jsoup = "org.jsoup:jsoup:1.11.3"
-    const val h2 = "com.h2database:h2:1.4.197"
-    const val exposed = "org.jetbrains.exposed:exposed:0.13.5"
+    const val h2 = "com.h2database:h2:1.4.199"
+    const val exposed = "org.jetbrains.exposed:exposed:0.13.7"
     const val guice = "com.google.inject:guice:4.2.2"
-    const val tornadoFx = "no.tornado:tornadofx:1.7.17"
+    const val tornadoFx = "no.tornado:tornadofx:1.7.19"
     const val rxKotlin = "io.reactivex.rxjava2:rxkotlin:2.3.0"
     const val apfloat = "org.apfloat:apfloat:1.8.3"
     const val jacksonKotlin = "com.fasterxml.jackson.module:jackson-module-kotlin:2.9.8"
