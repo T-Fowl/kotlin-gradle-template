@@ -16,7 +16,7 @@ object Libraries {
     const val rxKotlin = "io.reactivex.rxjava2:rxkotlin:2.3.0"
     const val apfloat = "org.apfloat:apfloat:1.8.3"
     const val jacksonKotlin = "com.fasterxml.jackson.module:jackson-module-kotlin:2.9.8"
-    const val joml = "org.joml:joml:1.9.12"
+    const val joml = "org.joml:joml:1.9.14"
 
     object Kotlin {
         const val stdlibJdk8 = "org.jetbrains.kotlin:kotlin-stdlib-jdk8:${Versions.kotlin}"
