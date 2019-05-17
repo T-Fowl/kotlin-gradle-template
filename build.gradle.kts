@@ -19,10 +19,6 @@ kapt {
     /*useBuildCache = true*/
 }
 
-tasks.withType<KotlinCompile> {
-    kotlinOptions.jvmTarget = "1.8"
-}
-
 repositories {
     jcenter()
     mavenCentral()
