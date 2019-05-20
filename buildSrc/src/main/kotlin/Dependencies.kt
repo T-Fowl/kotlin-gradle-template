@@ -6,25 +6,65 @@ object Versions {
 
 @Suppress("ALL")
 object Libraries {
+
+    /* Test Libraries */
     const val junit = "junit:junit:4.12"
     const val mockk = "io.mockk:mockk:1.9.3"
 
-    const val log4jSlf4jImpl = "org.apache.logging.log4j:log4j-slf4j-impl:2.11.2"
-    const val jsoup = "org.jsoup:jsoup:1.11.3"
-    const val h2 = "com.h2database:h2:1.4.199"
-    const val exposed = "org.jetbrains.exposed:exposed:0.13.7"
-    const val guice = "com.google.inject:guice:4.2.2"
-    const val tornadoFx = "no.tornado:tornadofx:1.7.19"
-    const val rxKotlin = "io.reactivex.rxjava2:rxkotlin:2.3.0"
-    const val apfloat = "org.apfloat:apfloat:1.8.3"
-    const val jacksonKotlin = "com.fasterxml.jackson.module:jackson-module-kotlin:2.9.8"
-    const val joml = "org.joml:joml:1.9.14"
+    /* Logging */
+    val log4j = Log4j
 
-    object kotlin {
+    /* Parsing */
+    const val jsoup = "org.jsoup:jsoup:1.11.3"
+    val jackson = Jackson
+    const val poi = "org.apache.poi:poi-ooxml:4.1.0"
+
+    /* Networking / IO */
+    val ktor = Ktor
+    val okio = OkIO
+    val okhttp = OkHttp
+    val retrofit = Retrofit
+
+    /* Databases */
+    const val h2 = "com.h2database:h2:1.4.199"
+    const val mysql = "mysql:mysql-connector-java:8.0.16"
+    const val hikariCP = "com.zaxxer:HikariCP:3.3.1"
+    const val exposed = "org.jetbrains.exposed:exposed:0.13.7"
+
+    /* Dependency Injection */
+    val kodein = Kodein
+    const val guice = "com.google.inject:guice:4.2.2"
+
+    /* Maths */
+    const val joml = "org.joml:joml:1.9.14"
+    const val apfloat = "org.apfloat:apfloat:1.8.3"
+
+    /* Reactive */
+    const val rxKotlin = "io.reactivex.rxjava2:rxkotlin:2.3.0"
+
+    /* UI */
+    const val tornadoFx = "no.tornado:tornadofx:1.7.19"
+
+    /* Utility */
+    const val ehcache = "org.ehcache:ehcache:3.7.0"
+    val arrowkt = ArrowKt
+    val apachecommons = ApacheCommons
+    val lwjgl = Lwjgl
+    val asm = Asm
+
+    /* Crypto */
+    val bouncycastle = BouncyCastle
+    val jbcrypt = "org.mindrot:jbcrypt:0.4"
+
+    /* Kotlin */
+    val kotlin = Kotlin
+    val kotlinx = Kotlinx
+
+    object Kotlin {
         const val stdlibJdk8 = "org.jetbrains.kotlin:kotlin-stdlib-jdk8:${Versions.kotlin}"
     }
 
-    object ktor {
+    object Ktor {
         private const val version = "1.2.0"
         private const val prefix = "io.ktor:ktor"
 
@@ -78,11 +118,13 @@ object Libraries {
         const val clientMockJvm = "$prefix-client-mock-jvm:$version"
     }
 
-    object kotlinx {
+    object Kotlinx {
 
         const val serializationRuntime = "org.jetbrains.kotlinx:kotlinx-serialization-runtime:0.10.0"
 
-        object coroutines {
+        val coroutines = Coroutines
+
+        object Coroutines {
             private const val version = "1.2.1"
             private const val prefix = "org.jetbrains.kotlinx:kotlinx-coroutines"
 
@@ -92,11 +134,11 @@ object Libraries {
         }
     }
 
-    object kodein {
+    object Kodein {
         const val genericJvm = "org.kodein.di:kodein-di-generic-jvm:6.2.0"
     }
 
-    object retrofit {
+    object Retrofit {
         private const val version = "2.5.0"
         private const val prefix = "com.squareup.retrofit2"
 
@@ -110,15 +152,15 @@ object Libraries {
         const val scalarsConverter = "$prefix:converter-scalars:$version"
     }
 
-    object okhttp {
+    object OkHttp {
         const val okhttp = "com.squareup.okhttp3:okhttp:3.14.0"
     }
 
-    object okio {
+    object OkIO {
         const val okio = "com.squareup.okio:okio:2.2.2"
     }
 
-    object arrowkt {
+    object ArrowKt {
         private const val version = "0.9.0"
         private const val prefix = "io.arrow-kt:arrow"
 
@@ -148,11 +190,11 @@ object Libraries {
         const val integrationEetrofitAdapter = "$prefix-integration-retrofit-adapter:$version"
     }
 
-    object apachecommons {
+    object ApacheCommons {
         const val compress = "org.apache.commons:commons-compress:1.18"
     }
 
-    object lwjgl {
+    object Lwjgl {
         private const val version = "3.2.2"
         private const val prefix = "org.lwjg:lwjgl"
 
@@ -232,5 +274,49 @@ object Libraries {
             val opus = "$prefix-opus:$version:$classifier"
             val libdivide = "$prefix-libdivide:$version:$classifier"
         }
+    }
+
+    object Log4j {
+        private const val version = "2.1.12"
+        private const val prefix = "org.apache.logging.log4j:log4j"
+
+        const val core = "$prefix-core:$version"
+        const val api = "$prefix-api:$version"
+        const val slf4jImpl = "$prefix-slf4j-impl:$version"
+        const val slf4jImpl18 = "$prefix-slf4j18-impl:$version"
+        const val jul = "$prefix-jul:$version"
+        const val toSlf4j = "$prefix-to-slf4j:$version"
+    }
+
+    object Asm {
+        private const val version = "7.1"
+        private const val prefix = "org.ow2.asm:asm"
+
+        const val asm = "$prefix:$version"
+        const val commons = "$prefix-commons:$version"
+        const val util = "$prefix-util:$version"
+        const val tree = "$prefix-tree:$version"
+        const val analysis = "$prefix-analysis:$version"
+        const val test = "$prefix-test:$version"
+    }
+
+    object BouncyCastle {
+        private const val version = "1.61"
+        private const val prefix = "org.bouncycastle"
+
+        const val bcprov = "$prefix:bcprov-jdk15on:$version"
+        const val bcpkix = "$prefix:bcpkix-jdk15on:$version"
+        const val bcmail = "$prefix:bcmail-jdk15on:$version"
+        const val bcpg = "$prefix:bcpg-jdk15on:$version"
+        const val bcprovExt = "$prefix:bcprov-ext-jdk15on:$version"
+        const val bctls = "$prefix:bctls-jdk15on:$version"
+
+    }
+
+    object Jackson {
+        private const val version = "2.9.8"
+        private const val prefix = "com.fasterxml.jackson.module:jackson-module"
+
+        const val kotlin = "$prefix-kotlin:$version"
     }
 }
