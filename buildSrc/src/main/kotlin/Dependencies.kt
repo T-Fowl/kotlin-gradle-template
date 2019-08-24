@@ -1,7 +1,7 @@
 import org.gradle.internal.os.OperatingSystem
 
 object Versions {
-    const val kotlin = "1.3.31"
+    const val kotlin = "1.3.50"
 }
 
 @Suppress("ALL")
@@ -15,9 +15,8 @@ object Libraries {
     val log4j = Log4j
 
     /* Parsing */
-    const val jsoup = "org.jsoup:jsoup:1.11.3"
+    const val jsoup = "org.jsoup:jsoup:1.12.1"
     val jackson = Jackson
-    const val poi = "org.apache.poi:poi-ooxml:4.1.0"
 
     /* Networking / IO */
     val ktor = Ktor
@@ -29,18 +28,15 @@ object Libraries {
     const val h2 = "com.h2database:h2:1.4.199"
     const val mysql = "mysql:mysql-connector-java:8.0.16"
     const val hikariCP = "com.zaxxer:HikariCP:3.3.1"
+    const val flywaydb = "org.flywaydb:flyway-core:6.0.0"
     const val exposed = "org.jetbrains.exposed:exposed:0.13.7"
 
     /* Dependency Injection */
     val kodein = Kodein
-    const val guice = "com.google.inject:guice:4.2.2"
 
     /* Maths */
     const val joml = "org.joml:joml:1.9.14"
     const val apfloat = "org.apfloat:apfloat:1.8.3"
-
-    /* Reactive */
-    const val rxKotlin = "io.reactivex.rxjava2:rxkotlin:2.3.0"
 
     /* UI */
     const val tornadoFx = "no.tornado:tornadofx:1.7.19"
@@ -48,7 +44,7 @@ object Libraries {
     /* Utility */
     const val ehcache = "org.ehcache:ehcache:3.7.0"
     val arrowkt = ArrowKt
-    val apachecommons = ApacheCommons
+    val apache = Apache
     val lwjgl = Lwjgl
     val asm = Asm
 
@@ -65,7 +61,7 @@ object Libraries {
     }
 
     object Ktor {
-        private const val version = "1.2.0"
+        private const val version = "1.2.3"
         private const val prefix = "io.ktor:ktor"
 
         const val client = "$prefix-client:$version"
@@ -120,12 +116,12 @@ object Libraries {
 
     object Kotlinx {
 
-        const val serializationRuntime = "org.jetbrains.kotlinx:kotlinx-serialization-runtime:0.10.0"
+        const val serializationRuntime = "org.jetbrains.kotlinx:kotlinx-serialization-runtime:0.12.0"
 
         val coroutines = Coroutines
 
         object Coroutines {
-            private const val version = "1.2.1"
+            private const val version = "1.3.0"
             private const val prefix = "org.jetbrains.kotlinx:kotlinx-coroutines"
 
             const val core = "$prefix-core:$version"
@@ -135,11 +131,11 @@ object Libraries {
     }
 
     object Kodein {
-        const val genericJvm = "org.kodein.di:kodein-di-generic-jvm:6.2.0"
+        const val genericJvm = "org.kodein.di:kodein-di-generic-jvm:6.3.1"
     }
 
     object Retrofit {
-        private const val version = "2.5.0"
+        private const val version = "2.6.1"
         private const val prefix = "com.squareup.retrofit2"
 
         const val retrofit = "$prefix:retrofit:$version"
@@ -153,11 +149,11 @@ object Libraries {
     }
 
     object OkHttp {
-        const val okhttp = "com.squareup.okhttp3:okhttp:3.14.0"
+        const val okhttp = "com.squareup.okhttp3:okhttp:4.1.0"
     }
 
     object OkIO {
-        const val okio = "com.squareup.okio:okio:2.2.2"
+        const val okio = "com.squareup.okio:okio:2.3.0"
     }
 
     object ArrowKt {
@@ -190,8 +186,9 @@ object Libraries {
         const val integrationEetrofitAdapter = "$prefix-integration-retrofit-adapter:$version"
     }
 
-    object ApacheCommons {
-        const val compress = "org.apache.commons:commons-compress:1.18"
+    object Apache {
+        const val commonsCompress = "org.apache.commons:commons-compress:1.18"
+        const val poi = "org.apache.poi:poi-ooxml:4.1.0"
     }
 
     object Lwjgl {
@@ -314,7 +311,7 @@ object Libraries {
     }
 
     object Jackson {
-        private const val version = "2.9.8"
+        private const val version = "2.9.9"
         private const val prefix = "com.fasterxml.jackson.module:jackson-module"
 
         const val kotlin = "$prefix-kotlin:$version"
