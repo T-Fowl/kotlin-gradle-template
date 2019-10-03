@@ -3,7 +3,7 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 plugins {
     java
     kotlin("jvm") version Versions.kotlin
-    kotlin("kapt") version Versions.kotlin
+    //kotlin("kapt") version Versions.kotlin
 }
 
 java {
@@ -15,9 +15,9 @@ tasks.withType<KotlinCompile>().all {
     kotlinOptions.jvmTarget = "1.8"
 }
 
-kapt {
-    /*useBuildCache = true*/
-}
+//kapt {
+//    useBuildCache = true
+//}
 
 repositories {
     jcenter()
