@@ -26,23 +26,23 @@ object Libraries {
 
     /* Databases */
     const val h2 = "com.h2database:h2:1.4.199"
-    const val mysql = "mysql:mysql-connector-java:8.0.16"
-    const val hikariCP = "com.zaxxer:HikariCP:3.3.1"
-    const val flywaydb = "org.flywaydb:flyway-core:6.0.0"
-    const val exposed = "org.jetbrains.exposed:exposed:0.13.7"
+    const val mysql = "mysql:mysql-connector-java:8.0.17"
+    const val hikariCP = "com.zaxxer:HikariCP:3.4.1"
+    const val flywaydb = "org.flywaydb:flyway-core:6.0.4"
+    const val exposed = "org.jetbrains.exposed:exposed:0.17.4"
 
     /* Dependency Injection */
     val kodein = Kodein
 
     /* Maths */
-    const val joml = "org.joml:joml:1.9.14"
-    const val apfloat = "org.apfloat:apfloat:1.8.3"
+    const val joml = "org.joml:joml:1.9.18"
+    const val apfloat = "org.apfloat:apfloat:1.9.1"
 
     /* UI */
     const val tornadoFx = "no.tornado:tornadofx:1.7.19"
 
     /* Utility */
-    const val ehcache = "org.ehcache:ehcache:3.7.0"
+    const val ehcache = "org.ehcache:ehcache:3.8.1"
     val arrowkt = ArrowKt
     val apache = Apache
     val lwjgl = Lwjgl
@@ -61,7 +61,7 @@ object Libraries {
     }
 
     object Ktor {
-        private const val version = "1.2.3"
+        private const val version = "1.2.5"
         private const val prefix = "io.ktor:ktor"
 
         const val client = "$prefix-client:$version"
@@ -116,12 +116,12 @@ object Libraries {
 
     object Kotlinx {
 
-        const val serializationRuntime = "org.jetbrains.kotlinx:kotlinx-serialization-runtime:0.12.0"
+        const val serializationRuntime = "org.jetbrains.kotlinx:kotlinx-serialization-runtime:0.13.0"
 
         val coroutines = Coroutines
 
         object Coroutines {
-            private const val version = "1.3.0"
+            private const val version = "1.3.2"
             private const val prefix = "org.jetbrains.kotlinx:kotlinx-coroutines"
 
             const val core = "$prefix-core:$version"
@@ -131,11 +131,11 @@ object Libraries {
     }
 
     object Kodein {
-        const val genericJvm = "org.kodein.di:kodein-di-generic-jvm:6.3.1"
+        const val genericJvm = "org.kodein.di:kodein-di-generic-jvm:6.4.0"
     }
 
     object Retrofit {
-        private const val version = "2.6.1"
+        private const val version = "2.6.2"
         private const val prefix = "com.squareup.retrofit2"
 
         const val retrofit = "$prefix:retrofit:$version"
@@ -149,14 +149,15 @@ object Libraries {
     }
 
     object OkHttp {
-        const val okhttp = "com.squareup.okhttp3:okhttp:4.1.0"
+        const val okhttp = "com.squareup.okhttp3:okhttp:4.2.0"
     }
 
     object OkIO {
-        const val okio = "com.squareup.okio:okio:2.3.0"
+        const val okio = "com.squareup.okio:okio:2.4.0"
     }
 
     object ArrowKt {
+        //TODO: 10.0.0 on bintray
         private const val version = "0.9.0"
         private const val prefix = "io.arrow-kt:arrow"
 
@@ -187,12 +188,12 @@ object Libraries {
     }
 
     object Apache {
-        const val commonsCompress = "org.apache.commons:commons-compress:1.18"
+        const val commonsCompress = "org.apache.commons:commons-compress:1.19"
         const val poi = "org.apache.poi:poi-ooxml:4.1.0"
     }
 
     object Lwjgl {
-        private const val version = "3.2.2"
+        private const val version = "3.2.3"
         private const val prefix = "org.lwjg:lwjgl"
 
         const val lwjgl = "$prefix:$version"
@@ -230,6 +231,7 @@ object Libraries {
         const val opus = "$prefix-opus:$version"
         const val cuda = "$prefix-cuda:$version"
         const val libdivide = "$prefix-libdivide:$version"
+        const val shaderrc = "$prefix-shaderrc:$version"
 
         @Suppress("INACCESSIBLE_TYPE")
         fun natives(os: OperatingSystem = OperatingSystem.current()): Natives = when (os) {
@@ -270,11 +272,12 @@ object Libraries {
             val zstd = "$prefix-zstd:$version:$classifier"
             val opus = "$prefix-opus:$version:$classifier"
             val libdivide = "$prefix-libdivide:$version:$classifier"
+            val shaderrc = "$prefix-shaderrc:$version:$classifier"
         }
     }
 
     object Log4j {
-        private const val version = "2.1.12"
+        private const val version = "2.12.1"
         private const val prefix = "org.apache.logging.log4j:log4j"
 
         const val core = "$prefix-core:$version"
@@ -286,7 +289,7 @@ object Libraries {
     }
 
     object Asm {
-        private const val version = "7.1"
+        private const val version = "7.2"
         private const val prefix = "org.ow2.asm:asm"
 
         const val asm = "$prefix:$version"
@@ -298,7 +301,7 @@ object Libraries {
     }
 
     object BouncyCastle {
-        private const val version = "1.61"
+        private const val version = "1.63"
         private const val prefix = "org.bouncycastle"
 
         const val bcprov = "$prefix:bcprov-jdk15on:$version"
@@ -311,7 +314,7 @@ object Libraries {
     }
 
     object Jackson {
-        private const val version = "2.9.9"
+        private const val version = "2.10.0"
         private const val prefix = "com.fasterxml.jackson.module:jackson-module"
 
         const val kotlin = "$prefix-kotlin:$version"
