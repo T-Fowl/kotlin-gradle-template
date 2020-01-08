@@ -1,7 +1,7 @@
 import org.gradle.internal.os.OperatingSystem
 
 object Versions {
-    const val kotlin = "1.3.50"
+    const val kotlin = "1.3.61"
 }
 
 @Suppress("ALL")
@@ -29,13 +29,13 @@ object Libraries {
     const val mysql = "mysql:mysql-connector-java:8.0.17"
     const val hikariCP = "com.zaxxer:HikariCP:3.4.1"
     const val flywaydb = "org.flywaydb:flyway-core:6.0.4"
-    const val exposed = "org.jetbrains.exposed:exposed:0.17.4"
+    const val exposed = "org.jetbrains.exposed:exposed:0.17.7"
 
     /* Dependency Injection */
     val kodein = Kodein
 
     /* Maths */
-    const val joml = "org.joml:joml:1.9.18"
+    const val joml = "org.joml:joml:1.9.20"
     const val apfloat = "org.apfloat:apfloat:1.9.1"
 
     /* UI */
@@ -116,12 +116,12 @@ object Libraries {
 
     object Kotlinx {
 
-        const val serializationRuntime = "org.jetbrains.kotlinx:kotlinx-serialization-runtime:0.13.0"
+        const val serializationRuntime = "org.jetbrains.kotlinx:kotlinx-serialization-runtime:0.14.0"
 
         val coroutines = Coroutines
 
         object Coroutines {
-            private const val version = "1.3.2"
+            private const val version = "1.3.3"
             private const val prefix = "org.jetbrains.kotlinx:kotlinx-coroutines"
 
             const val core = "$prefix-core:$version"
@@ -131,11 +131,11 @@ object Libraries {
     }
 
     object Kodein {
-        const val genericJvm = "org.kodein.di:kodein-di-generic-jvm:6.4.0"
+        const val genericJvm = "org.kodein.di:kodein-di-generic-jvm:6.5.1"
     }
 
     object Retrofit {
-        private const val version = "2.6.2"
+        private const val version = "2.7.1"
         private const val prefix = "com.squareup.retrofit2"
 
         const val retrofit = "$prefix:retrofit:$version"
@@ -149,42 +149,23 @@ object Libraries {
     }
 
     object OkHttp {
-        const val okhttp = "com.squareup.okhttp3:okhttp:4.2.0"
+        const val okhttp = "com.squareup.okhttp3:okhttp:4.3.0"
     }
 
     object OkIO {
-        const val okio = "com.squareup.okio:okio:2.4.0"
+        const val okio = "com.squareup.okio:okio:2.4.3"
     }
 
     object ArrowKt {
-        //TODO: 10.0.0 on bintray
-        private const val version = "0.9.0"
+        private const val version = "0.10.4"
         private const val prefix = "io.arrow-kt:arrow"
 
-        const val coreData = "$prefix-core-data:$version"
-        const val coreExtensions = "$prefix-core-extensions:$version"
+        const val core = "$prefix-core:$version"
         const val syntax = "$prefix-syntax:$version"
-        const val typeclasses = "$prefix-typeclasses:$version"
-        const val extrasData = "$prefix-extras-data:$version"
-        const val extrasExtensions = "$prefix-extras-extensions:$version"
         const val optics = "$prefix-optics:$version"
+        const val fx = "$prefix-fx:$version"
+        
         const val meta = "$prefix-meta:$version" //kapt
-
-        const val queryLanguage = "$prefix-query-language:$version"
-        const val freeData = "$prefix-free-data:$version"
-        const val freeExtensions = "$prefix-free-extensions:$version"
-        const val mtl = "$prefix-mtl:$version"
-        const val effectsData = "$prefix-effects-data:$version"
-        const val effectsExtensions = "$prefix-effects-extensions:$version"
-        const val effectsIoExtensions = "$prefix-effects-io-extensions:$version"
-        const val effectsRx2Data = "$prefix-effects-rx2-data:$version"
-        const val effectsRx2Extensions = "$prefix-effects-rx2-extensions:$version"
-        const val effectsReactorData = "$prefix-effects-reactor-data:$version"
-        const val effectsReactorExtensions = "$prefix-effects-reactor-extensions:$version"
-        const val generic = "$prefix-generic:$version"
-        const val recursionData = "$prefix-recursion-data:$version"
-        const val recursionExtensions = "$prefix-recursion-extensions:$version"
-        const val integrationEetrofitAdapter = "$prefix-integration-retrofit-adapter:$version"
     }
 
     object Apache {
