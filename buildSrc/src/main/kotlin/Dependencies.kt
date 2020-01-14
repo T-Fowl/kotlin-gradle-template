@@ -32,6 +32,7 @@ object Libraries {
     const val hikariCP = "com.zaxxer:HikariCP:3.4.1"
     const val flywaydb = "org.flywaydb:flyway-core:6.0.4"
     const val exposed = "org.jetbrains.exposed:exposed:0.17.7"
+    val kmongo = Kmongo
 
     /* Dependency Injection */
     val kodein = Kodein
@@ -338,6 +339,21 @@ object Libraries {
                 val id = "grpckotlin"
                 val artifact = "io.rouz:grpc-kotlin-gen:0.1.4"
             }
+        }
+    }
+    
+    object Kmongo {
+        private const val prefix = "org.litote.kmongo:kmongo"
+        private const val version = "3.11.2"
+        
+        fun withJackson() = ObjectMapping()
+        fun withPojoCodec() = ObjectMapping("native")
+        fun withSerialization() = ObjectMapping("serialization")
+        
+        class ObjectMapping internal constructor(classifier: String? = null) {
+            val sync = "$prefix${classifier?.let { "-$it" } ?: ""}:$version"
+            val async = "$prefix-async${classifier?.let { "-$it" } ?: ""}:$version"
+            val coroutine = "$prefix-coroutine${classifier?.let { "-$it" } ?: ""}:$version"
         }
     }
 }
