@@ -3,7 +3,6 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 plugins {
     java
     kotlin("jvm") version Versions.kotlin
-    //kotlin("kapt") version Versions.kotlin
 }
 
 java {
@@ -15,10 +14,6 @@ tasks.withType<KotlinCompile>().all {
     kotlinOptions.jvmTarget = "1.8"
 }
 
-//kapt {
-//    useBuildCache = true
-//}
-
 repositories {
     jcenter()
     mavenCentral()
@@ -26,9 +21,12 @@ repositories {
 }
 
 dependencies {
-    compile(Libraries.kotlin.stdlibJdk8)
+    implementation(Libraries.kotlin.stdlibJdk8)
 
-    testCompile(Libraries.junit)
-    testCompile(Libraries.mockk)
+    testImplementation(Libraries.mockk)
+    testImplementation(Libraries.junit.all)
 }
 
+tasks.withType<Test> {
+    useJUnitPlatform()
+}
