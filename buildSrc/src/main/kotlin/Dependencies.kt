@@ -33,6 +33,7 @@ object Libraries {
     const val flywaydb = "org.flywaydb:flyway-core:6.0.4"
     const val exposed = "org.jetbrains.exposed:exposed:0.17.7"
     val kmongo = Kmongo
+    val jasync = Jasync
 
     /* Dependency Injection */
     val kodein = Kodein
@@ -355,5 +356,10 @@ object Libraries {
             val async = "$prefix-async${classifier?.let { "-$it" } ?: ""}:$version"
             val coroutine = "$prefix-coroutine${classifier?.let { "-$it" } ?: ""}:$version"
         }
+    }
+    
+    object Jasync {
+        const val mysql = "com.github.jasync-sql:jasync-mysql:1.0.13"
+        const val postgresql = "com.github.jasync-sql:jasync-postgresql:1.0.13"
     }
 }
