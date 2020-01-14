@@ -2,6 +2,7 @@ import org.gradle.internal.os.OperatingSystem
 
 object Versions {
     const val kotlin = "1.3.61"
+    const val protobuf = "0.8.11"
 }
 
 @Suppress("ALL")
@@ -23,6 +24,7 @@ object Libraries {
     val okio = OkIO
     val okhttp = OkHttp
     val retrofit = Retrofit
+    val grpc = Grpc
 
     /* Databases */
     const val h2 = "com.h2database:h2:1.4.199"
@@ -312,5 +314,30 @@ object Libraries {
 
         /* For old projects */
         const val junit4 = "junit:junit:4.12"
+    }
+    
+    object Grpc {
+        private const val prefix = "io.grpc:grpc"
+        private const val version = "1.26.0"
+        
+        val netty = "$prefix-netty-shaded:$version"
+        val protobuf = "$prefix-protobuf:$version"
+        val stub = "$prefix-stub:$version")
+        
+        val plugins = Plugins
+        
+        object Plugins {
+            val grpc = GrpcPlugin
+            object GrpcPlugin {
+                val id = "grpc"
+                val artifact = "io.grpc:protoc-gen-grpc-java:$version"
+            }
+            
+            val grpcKotlin = GrpcKotlinPlugin
+            object GrpcKotlinPlugin {
+                val id = "grpckotlin"
+                val artifact = "io.rouz:grpc-kotlin-gen:0.1.4"
+            }
+        }
     }
 }
