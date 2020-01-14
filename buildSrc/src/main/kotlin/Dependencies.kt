@@ -8,7 +8,7 @@ object Versions {
 object Libraries {
 
     /* Test Libraries */
-    const val junit = "junit:junit:4.12"
+    val junit = Junit
     const val mockk = "io.mockk:mockk:1.9.3"
 
     /* Logging */
@@ -299,5 +299,18 @@ object Libraries {
         private const val prefix = "com.fasterxml.jackson.module:jackson-module"
 
         const val kotlin = "$prefix-kotlin:$version"
+    }
+    
+    object Junit {
+        private const val version = "5.5.2"
+        private const val prefix = "org.junit.jupiter:junit-jupiter"
+
+        const val api = "$prefix-api:$version"
+        const val engine = "$prefix-engine:$version"
+        const val params = "$prefix-params:$version"
+        const val all = "$prefix:$version"
+
+        /* For old projects */
+        const val junit4 = "junit:junit:4.12"
     }
 }
