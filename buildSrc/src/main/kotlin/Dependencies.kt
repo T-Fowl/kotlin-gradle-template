@@ -11,6 +11,7 @@ object Libraries {
     /* Test Libraries */
     val junit = Junit
     const val mockk = "io.mockk:mockk:1.9.3"
+    const val assertJ = "org.assertj:assertj-core:3.11.1"
 
     /* Logging */
     val log4j = Log4j
