@@ -66,7 +66,7 @@ object Libraries {
     }
 
     object Ktor {
-        private const val version = "1.2.5"
+        private const val version = "1.3.0"
         private const val prefix = "io.ktor:ktor"
 
         const val client = "$prefix-client:$version"
