@@ -180,7 +180,7 @@ object Libraries {
 
     object Lwjgl {
         private const val version = "3.2.3"
-        private const val prefix = "org.lwjg:lwjgl"
+        private const val prefix = "org.lwjgl:lwjgl"
 
         const val lwjgl = "$prefix:$version"
         const val assimp = "$prefix-assimp:$version"
