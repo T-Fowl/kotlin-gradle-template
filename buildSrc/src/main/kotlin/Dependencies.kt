@@ -217,7 +217,7 @@ object Libraries {
         const val opus = "$prefix-opus:$version"
         const val cuda = "$prefix-cuda:$version"
         const val libdivide = "$prefix-libdivide:$version"
-        const val shaderrc = "$prefix-shaderrc:$version"
+        const val shaderc = "$prefix-shaderc:$version"
 
         @Suppress("INACCESSIBLE_TYPE")
         fun natives(os: OperatingSystem = OperatingSystem.current()): Natives = when (os) {
@@ -258,7 +258,7 @@ object Libraries {
             val zstd = "$prefix-zstd:$version:$classifier"
             val opus = "$prefix-opus:$version:$classifier"
             val libdivide = "$prefix-libdivide:$version:$classifier"
-            val shaderrc = "$prefix-shaderrc:$version:$classifier"
+            val shaderc = "$prefix-shaderc:$version:$classifier"
         }
     }
 
