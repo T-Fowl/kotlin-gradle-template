@@ -325,7 +325,7 @@ object Libraries {
         
         val netty = "$prefix-netty-shaded:$version"
         val protobuf = "$prefix-protobuf:$version"
-        val stub = "$prefix-stub:$version")
+        val stub = "$prefix-stub:$version"
         
         val plugins = Plugins
         
