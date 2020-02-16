@@ -1,3 +1,7 @@
+@file:Suppress("UNUSED")
+
+import org.gradle.api.artifacts.Dependency
+import org.gradle.api.artifacts.dsl.DependencyHandler
 import org.gradle.internal.os.OperatingSystem
 
 object Versions {
@@ -55,7 +59,7 @@ object Libraries {
 
     /* Crypto */
     val bouncycastle = BouncyCastle
-    val jbcrypt = "org.mindrot:jbcrypt:0.4"
+    const val jbcrypt = "org.mindrot:jbcrypt:0.4"
 
     /* Kotlin */
     val kotlin = Kotlin
@@ -169,7 +173,7 @@ object Libraries {
         const val syntax = "$prefix-syntax:$version"
         const val optics = "$prefix-optics:$version"
         const val fx = "$prefix-fx:$version"
-        
+
         const val meta = "$prefix-meta:$version" //kapt
     }
 
@@ -182,7 +186,7 @@ object Libraries {
         private const val version = "3.2.3"
         private const val prefix = "org.lwjgl:lwjgl"
 
-        fun DependencyHandler.lwjglPlatform() = platform("$prefix-bom:$version")
+        fun DependencyHandler.lwjglPlatform(): Dependency = platform("$prefix-bom:$version")
 
         const val lwjgl = prefix
         const val assimp = "$prefix-assimp"
@@ -326,7 +330,7 @@ object Libraries {
 
         const val kotlin = "$prefix-kotlin:$version"
     }
-    
+
     object Junit {
         private const val version = "5.5.2"
         private const val prefix = "org.junit.jupiter:junit-jupiter"
@@ -339,47 +343,49 @@ object Libraries {
         /* For old projects */
         const val junit4 = "junit:junit:4.12"
     }
-    
+
     object Grpc {
         private const val prefix = "io.grpc:grpc"
         private const val version = "1.26.0"
-        
-        val netty = "$prefix-netty-shaded:$version"
-        val protobuf = "$prefix-protobuf:$version"
-        val stub = "$prefix-stub:$version"
-        
+
+        const val netty = "$prefix-netty-shaded:$version"
+        const val protobuf = "$prefix-protobuf:$version"
+        const val stub = "$prefix-stub:$version"
+
         val plugins = Plugins
-        
+
         object Plugins {
             val grpc = GrpcPlugin
+
             object GrpcPlugin {
-                val id = "grpc"
-                val artifact = "io.grpc:protoc-gen-grpc-java:$version"
+                const val id = "grpc"
+                const val artifact = "io.grpc:protoc-gen-grpc-java:$version"
             }
-            
+
             val grpcKotlin = GrpcKotlinPlugin
+
             object GrpcKotlinPlugin {
-                val id = "grpckotlin"
-                val artifact = "io.rouz:grpc-kotlin-gen:0.1.4"
+                const val id = "grpckotlin"
+                const val artifact = "io.rouz:grpc-kotlin-gen:0.1.4"
             }
         }
     }
-    
+
     object Kmongo {
         private const val prefix = "org.litote.kmongo:kmongo"
         private const val version = "3.11.2"
-        
+
         fun withJackson() = ObjectMapping()
         fun withPojoCodec() = ObjectMapping("native")
         fun withSerialization() = ObjectMapping("serialization")
-        
+
         class ObjectMapping internal constructor(classifier: String? = null) {
             val sync = "$prefix${classifier?.let { "-$it" } ?: ""}:$version"
             val async = "$prefix-async${classifier?.let { "-$it" } ?: ""}:$version"
             val coroutine = "$prefix-coroutine${classifier?.let { "-$it" } ?: ""}:$version"
         }
     }
-    
+
     object Jasync {
         const val mysql = "com.github.jasync-sql:jasync-mysql:1.0.13"
         const val postgresql = "com.github.jasync-sql:jasync-postgresql:1.0.13"
