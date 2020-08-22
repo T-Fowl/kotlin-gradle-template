@@ -14,41 +14,41 @@ object Libraries {
 
     /* Test Libraries */
     val junit = Junit
-    const val mockk = "io.mockk:mockk:1.9.3"
-    const val assertJ = "org.assertj:assertj-core:3.11.1"
+    const val mockk = "io.mockk:mockk:1.10.0"
+    const val assertJ = "org.assertj:assertj-core:3.16.1"
 
     /* Logging */
     val log4j = Log4j
 
     /* Parsing */
-    const val jsoup = "org.jsoup:jsoup:1.12.1"
+    const val jsoup = "org.jsoup:jsoup:1.13.1"
     val jackson = Jackson
 
     /* Networking / IO */
     val ktor = Ktor
-    val okio = OkIO
-    val okhttp = OkHttp
+    const val okio =  "com.squareup.okio:okio:2.8.0"
+    const val okhttp = "com.squareup.okhttp3:okhttp:4.8.1"
     val retrofit = Retrofit
     val grpc = Grpc
 
     /* Databases */
-    const val h2 = "com.h2database:h2:1.4.199"
-    const val mysql = "mysql:mysql-connector-java:8.0.17"
-    const val hikariCP = "com.zaxxer:HikariCP:3.4.1"
-    const val flywaydb = "org.flywaydb:flyway-core:6.0.4"
-    const val exposed = "org.jetbrains.exposed:exposed:0.17.7"
+    const val h2 = "com.h2database:h2:1.4.200"
+    const val mysql = "mysql:mysql-connector-java:8.0.21"
+    const val hikariCP = "com.zaxxer:HikariCP:3.4.5"
+    const val flywaydb = "org.flywaydb:flyway-core:6.5.5"
+    const val exposed = "org.jetbrains.exposed:exposed:0.26.2"
     val kmongo = Kmongo
     val jasync = Jasync
 
     /* Dependency Injection */
-    val kodein = Kodein
+    val kodein = "org.kodein.di:kodein-di:7.0.0"
 
     /* Maths */
-    const val joml = "org.joml:joml:1.9.20"
+    const val joml = "org.joml:joml:1.9.25"
     const val apfloat = "org.apfloat:apfloat:1.9.1"
 
     /* UI */
-    const val tornadoFx = "no.tornado:tornadofx:1.7.19"
+    const val tornadoFx = "no.tornado:tornadofx:1.7.20"
 
     /* Utility */
     const val ehcache = "org.ehcache:ehcache:3.8.1"
@@ -131,7 +131,7 @@ object Libraries {
         val coroutines = Coroutines
 
         object Coroutines {
-            private const val version = "1.3.3"
+            private const val version = "1.3.9"
             private const val prefix = "org.jetbrains.kotlinx:kotlinx-coroutines"
 
             const val core = "$prefix-core:$version"
@@ -140,12 +140,8 @@ object Libraries {
         }
     }
 
-    object Kodein {
-        const val genericJvm = "org.kodein.di:kodein-di-generic-jvm:6.5.1"
-    }
-
     object Retrofit {
-        private const val version = "2.7.1"
+        private const val version = "2.9.0"
         private const val prefix = "com.squareup.retrofit2"
 
         const val retrofit = "$prefix:retrofit:$version"
@@ -158,16 +154,8 @@ object Libraries {
         const val scalarsConverter = "$prefix:converter-scalars:$version"
     }
 
-    object OkHttp {
-        const val okhttp = "com.squareup.okhttp3:okhttp:4.3.0"
-    }
-
-    object OkIO {
-        const val okio = "com.squareup.okio:okio:2.4.3"
-    }
-
     object ArrowKt {
-        private const val version = "0.10.4"
+        private const val version = "0.10.5"
         private const val prefix = "io.arrow-kt:arrow"
 
         const val core = "$prefix-core:$version"
@@ -179,8 +167,8 @@ object Libraries {
     }
 
     object Apache {
-        const val commonsCompress = "org.apache.commons:commons-compress:1.19"
-        const val poi = "org.apache.poi:poi-ooxml:4.1.0"
+        const val commonsCompress = "org.apache.commons:commons-compress:1.20"
+        const val poi = "org.apache.poi:poi-ooxml:4.1.2"
     }
 
     object Lwjgl {
@@ -289,7 +277,7 @@ object Libraries {
     }
 
     object Log4j {
-        private const val version = "2.12.1"
+        private const val version = "2.13.3"
         private const val prefix = "org.apache.logging.log4j:log4j"
 
         const val core = "$prefix-core:$version"
@@ -298,10 +286,13 @@ object Libraries {
         const val slf4jImpl18 = "$prefix-slf4j18-impl:$version"
         const val jul = "$prefix-jul:$version"
         const val toSlf4j = "$prefix-to-slf4j:$version"
+
+        const val kubernetes = "$prefix-kubernetes:$version"
+        const val docker = "$prefix-docker:$version"
     }
 
     object Asm {
-        private const val version = "7.2"
+        private const val version = "8.0.1"
         private const val prefix = "org.ow2.asm:asm"
 
         const val asm = "$prefix:$version"
@@ -313,7 +304,7 @@ object Libraries {
     }
 
     object BouncyCastle {
-        private const val version = "1.63"
+        private const val version = "1.66"
         private const val prefix = "org.bouncycastle"
 
         const val bcprov = "$prefix:bcprov-jdk15on:$version"
@@ -326,14 +317,14 @@ object Libraries {
     }
 
     object Jackson {
-        private const val version = "2.10.0"
-        private const val prefix = "com.fasterxml.jackson.module:jackson-module"
+        private const val version = "2.11.12"
 
-        const val kotlin = "$prefix-kotlin:$version"
+        const val kotlin = "com.fasterxml.jackson.module:jackson-module-kotlin:$version"
+        const val jsr310 = "com.fasterxml.jackson.datatype:jackson-datatype-jsr310:$version"
     }
 
     object Junit {
-        private const val version = "5.5.2"
+        private const val version = "5.6.2"
         private const val prefix = "org.junit.jupiter:junit-jupiter"
 
         const val api = "$prefix-api:$version"
@@ -374,7 +365,7 @@ object Libraries {
 
     object Kmongo {
         private const val prefix = "org.litote.kmongo:kmongo"
-        private const val version = "3.11.2"
+        private const val version = "4.1.2"
 
         fun withJackson() = ObjectMapping()
         fun withPojoCodec() = ObjectMapping("native")
@@ -388,7 +379,8 @@ object Libraries {
     }
 
     object Jasync {
-        const val mysql = "com.github.jasync-sql:jasync-mysql:1.0.13"
-        const val postgresql = "com.github.jasync-sql:jasync-postgresql:1.0.13"
+        private const val version = "1.1.3"
+        const val mysql = "com.github.jasync-sql:jasync-mysql:$version"
+        const val postgresql = "com.github.jasync-sql:jasync-postgresql:$version"
     }
 }
