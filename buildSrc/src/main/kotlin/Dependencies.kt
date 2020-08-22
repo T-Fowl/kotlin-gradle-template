@@ -70,54 +70,47 @@ object Libraries {
     }
 
     object Ktor {
-        private const val version = "1.3.0"
+        private const val version = "1.4.0"
         private const val prefix = "io.ktor:ktor"
 
-        const val client = "$prefix-client:$version"
-        const val clientCore = "$prefix-client-core:$version"
-        const val clientCoreJvm = "$prefix-client-core-jvm:$version"
-        const val clientAuthBasic = "$prefix-client-auth-basic:$version"
-        const val clientWebsocket = "$prefix-client-websocket:$version"
-        const val clientLoggingJvm = "$prefix-client-logging-jvm:$version"
+        // ktor-server
+        const val serverCore = "$prefix-server-core:$version"
+        const val serverJetty = "$prefix-server-jetty:$version"
+        const val serverNetty = "$prefix-server-netty:$version"
+        const val serverTomcat = "$prefix-server-tomcat:$version"
+        const val serverCio = "$prefix-server-cio:$version"
+        const val serverServlet = "$prefix-server-servlet:$version"
+        const val serverTestHost = "$prefix-server-test-host:$version"
+        const val serverHostCommon = "$prefix-server-host-common:$version"
 
-        const val clientOkHttp = "$prefix-client-okhttp:$version"
-        const val clientApache = "$prefix-client-apache:$version"
-        const val clientCio = "$prefix-client-cio:$version"
-        const val clientJetty = "$prefix-client-jetty:$version"
-
-        const val clientJson = "$prefix-client-json:$version"
-        const val clientJsonJvm = "$prefix-client-json-jvm:$version"
-
-        const val jackson = "$prefix-jackson:$version"
-        const val clientJackson = "$prefix-client-jackson:$version"
-        const val gson = "$prefix-gson:$version"
-        const val clientGson = "$prefix-client-gson:$version"
-
-        const val velocity = "$prefix-velocity:$version"
-        const val freemarker = "$prefix-freemarker:$version"
-
-        const val features = "$prefix-features:$version"
+        // ktor-features
         const val auth = "$prefix-auth:$version"
         const val authJwt = "$prefix-auth-jwt:$version"
         const val authLdap = "$prefix-auth-ldap:$version"
+        const val freemarker = "$prefix-freemarker:$version"
+        const val velocity = "$prefix-velocity:$version"
+        const val gson = "$prefix-gson:$version"
+        const val jackson = "$prefix-jackson:$version"
         const val htmlBuilder = "$prefix-html-builder:$version"
         const val locations = "$prefix-locations:$version"
         const val metrics = "$prefix-metrics:$version"
+        const val serverSessions = "$prefix-server-sessions:$version"
         const val websockets = "$prefix-websockets:$version"
+
+        // ktor-client
+        const val clientCore = "$prefix-client-core:$version"
+        const val clientApache = "$prefix-client-apache:$version"
+        const val clientCio = "$prefix-client-cio:$version"
+        const val clientJetty = "$prefix-client-jetty:$version"
+        const val clientOkHttp = "$prefix-client-okhttp:$version"
+        const val clientAuthBasic = "$prefix-client-auth-basic:$version"
+        const val clientJson = "$prefix-client-json:$version"
+
+        // ktor-network
         const val network = "$prefix-network:$version"
         const val networkTls = "$prefix-network-tls:$version"
-        const val webjars = "$prefix-webjars:$version"
 
-
-        const val server = "$prefix-server:$version"
-        const val serverCore = "$prefix-server-core:$version"
-        const val serverNetty = "$prefix-server-netty:$version"
-        const val serverJetty = "$prefix-server-jetty:$version"
-        const val serverCio = "$prefix-server-cio:$version"
-        const val serverTomcat = "$prefix-server-tomcat:$version"
-        const val serverSessions = "$prefix-server-sessions:$version"
-        const val serverHostCommon = "$prefix-server-host-common:$version"
-
+        // tests
         const val serverTests = "$prefix-server-tests:$version"
         const val clientMock = "$prefix-client-mock:$version"
         const val clientMockJvm = "$prefix-client-mock-jvm:$version"
