@@ -125,7 +125,15 @@ object Libraries {
 
     object Kotlinx {
 
-        const val serializationRuntime = "org.jetbrains.kotlinx:kotlinx-serialization-runtime:0.14.0"
+        val serialization = Serialization
+
+        object Serialization {
+            private const val version = "1.0.0-RC"
+            private const val prefix = "org.jetbrains.kotlinx:kotlinx-serialization"
+
+            const val core = "$prefix-core:$version"
+            const val protobuf = "$prefix-protobuf:$version"
+        }
 
         val coroutines = Coroutines
 
