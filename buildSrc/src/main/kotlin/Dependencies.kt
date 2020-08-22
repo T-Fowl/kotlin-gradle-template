@@ -5,7 +5,7 @@ import org.gradle.api.artifacts.dsl.DependencyHandler
 import org.gradle.internal.os.OperatingSystem
 
 object Versions {
-    const val kotlin = "1.3.70"
+    const val kotlin = "1.4.0"
     const val protobuf = "0.8.11"
 }
 
